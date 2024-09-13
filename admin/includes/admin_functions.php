@@ -238,7 +238,7 @@ function updateTopic($request_values) {
         $query = "UPDATE topics SET name='$topic_name', slug='$topic_slug' WHERE id=$topic_id";
         mysqli_query($conn, $query);
 
-        $_SESSION['message'] = "topeicc updated successfully";
+        $_SESSION['message'] = "topic updated successfully";
         header('Location: topics.php');
         exit(0);
     }
