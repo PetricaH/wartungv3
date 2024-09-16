@@ -67,7 +67,73 @@ $posts = getAllPosts();
                             <input type="checkbox" value="1" name="publish" <?php if ($published) echo 'checked'; ?>>
                         </label>
                     <?php endif; ?>
+
+                    <!-- buttons for savingand publishing -->
+                    <button type="submit" name="save_post" class="btn">Save as Draft</button>
+                    <button type="submit" name="publish_post" class="btn">Publish</button>
                 </form>
             </div>
+        <?php endif; ?>
+
+        <!-- display all posts -->
+        <div class="table-div" style="width: 80%;">
+            <?php if (empty($posts)): ?>
+                <h1 style="text-align: center; margin-top: 20px;">No posts in the database.</h1>
+            <?php else: ?>
+                <table class="table">
+                    <thead>
+                        <th>No</th>
+                        <th>Author</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Published</th>
+                        <th>Image</th>
+                        <?php if ($_SESSION['user']['role'] == "Admin"): ?>
+                            <th><small>Image</small></th>
+                        <?php endif; ?>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($posts as $key => $post): ?>
+                            <tr>
+                                <td><?php echo htmlspecialchars($key + 1); ?></td>
+                                <td><?php echo htmlspecialchars($post['username']); ?></td>
+                                <td>
+                                    <a target="_blank" href="<?php echo BASE_URL . 'single_post.php?post-slug=' . htmlspecialchars($post['slug']); ?>">
+                                        <?php echo htmlspecialchars($post['title']); ?>
+                                    </a>
+                                </td>
+                                <td><?php echo htmlspecialchars($post['id']); ?></td>
+                                <td><?php echo $post['published'] ? "Yes" : "No"; ?></td>
+                                <td><img src="<?php echo BASE_URL . '/uploads/posts/' . htmlspecialchars($post['image']); ?>" alt="" style="height: 60px;"></td>
+
+                                <?php if ($_SESSION['user']['role'] == "Admin"): ?>
+                                    <td>
+                                        <?php if($post['published']): ?>
+                                            <a class="fa fa-check btn unpublish" href="posts.php?unpublish=<?php echo htmlspecialchars($post['id']); ?>"></a>
+                                        <?php else: ?>
+                                            <a class="fa fa-times btn publish" href="posts.php?publish=<?php echo htmlspecialchars($post['id']); ?>"></a>
+                                        <?php endif; ?>
+                                    </td>
+                                <?php endif; ?>
+
+                                <td>
+                                    <a class="fa fa-pencil btn edit" href="posts.php?edit-post=<?php echo htmlspecialchars($post['id']); ?>"></a>
+                                </td>
+                                <td>
+                                    <a class="fa fa-trash btn edit" href="posts.php?delete-post=<?php echo htmlspecialchars($post['id']); ?>"></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                   </tbody>
+                </table>
+            <?php endif; ?>
+        </div>
     </div>
 </body>
+</html>
+
+<script>
+    CKEDITOR.replace('body');
+</script>
