@@ -9,6 +9,20 @@ body {
     background-color: #fffae6;
 }
 
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+@media (min-width: 1000px) {
+    .hero-section-group {
+        height: 80vh;
+    }
+}
+
 #hero-section {
     display: flex;
     flex-direction: column;
@@ -16,7 +30,10 @@ body {
     align-items: center;
     position: relative;
     height: 100vh;
-    background-image: url('static/images/your-image.jpg');
+    background-image: url('../images/hero-section-main-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
 }
 
 .hero-section-group {
@@ -27,17 +44,17 @@ body {
     align-items: center;
     background-color: #ffe066;
     width: 90%;
-    margin-top: 200px;
+    padding: 100px 50px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
 }
 
 .text-hero-part {
-    max-width: 500px;
+    max-width: 700px;
 }
 
-.image-hero-part img {
-    max-width: 400px;
-}
-
-h1 {
-    font-size: 3rem;
+.text-hero-part p {
+    padding-top: 15px;
+    max-width: 450px;
 }

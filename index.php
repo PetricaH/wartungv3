@@ -14,7 +14,7 @@ error_reporting(E_ALL);
             <div class="text-hero-part">
                 <h1>Wartung - partenerul firmelor care nu mai au probleme de întreținere</h1>
                 <p>Cum își rezolvă clienții noștri problemele de întreținere cu produse specializate?</p>
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined arrow-downward">
                     arrow_downward
                     </span>
             </div>
