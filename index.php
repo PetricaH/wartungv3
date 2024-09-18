@@ -1,11 +1,6 @@
-<?php require_once('config.php') ?>
-<?php require_once( ROOT_PATH . '/includes/head_section.php') ?>
-<?php require_once( ROOT_PATH . '/includes/public_functions.php') ?>
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-?>
-
+<?php require_once('config.php'); ?>
+<?php require_once( ROOT_PATH . '/includes/head_section.php'); ?>
+<?php require_once( ROOT_PATH . '/includes/public_functions.php'); ?>
      <title>Wartung</title>
 </head>
 <body>
