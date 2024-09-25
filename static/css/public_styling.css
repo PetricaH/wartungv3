@@ -32,7 +32,7 @@ h1 {
     }
 }
 
-@media (min-width: 2204px) {
+@media (min-width: 2088px) {
     .text-hero-part {
         margin-top: 200px;
     }
