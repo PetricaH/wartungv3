@@ -17,9 +17,24 @@ h1 {
     font-size: 3rem;
 }
 
+#wartung-blk-logo {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 20px;
+    z-index: 1;
+}
+
 @media (min-width: 1000px) {
     .hero-section-group {
         height: 80vh;
+    }
+}
+
+@media (min-width: 2204px) {
+    .text-hero-part {
+        margin-top: 200px;
     }
 }
 
@@ -30,7 +45,6 @@ h1 {
     align-items: center;
     position: relative;
     height: 100vh;
-    background-image: url('../images/hero-section-main-bg.jpeg');
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(10px);
@@ -41,9 +55,8 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     background-color: #ffe066;
-    width: 90%;
+    width: 95%;
     padding: 100px 50px;
     border-radius: 8px;
     position: relative;
@@ -52,6 +65,7 @@ h1 {
 
 .text-hero-part {
     max-width: 700px;
+    vertical-align: middle;
 }
 
 .text-hero-part p {

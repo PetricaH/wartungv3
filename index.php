@@ -10,6 +10,7 @@ error_reporting(E_ALL);
 </head>
 <body>
     <section id="hero-section">
+    <img src="static/images/wartung-blk-logo.png" alt="Wartung Logo" id="wartung-blk-logo">
         <div class="hero-section-group">
             <div class="text-hero-part">
                 <h1>Wartung - partenerul firmelor care nu mai au probleme de întreținere</h1>
