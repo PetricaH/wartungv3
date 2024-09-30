@@ -72,3 +72,36 @@ h1 {
     padding-top: 15px;
     max-width: 450px;
 }
+
+.second-section-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.second-section-group-cards-part {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.second-section-card {
+    background-color: #ffe066;
+    padding: 25px 15px;
+    border-radius: 8px;
+}
+
+.second-section-card span {
+    background-color: red;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.second-section-group-text-part h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
