@@ -33,6 +33,7 @@ error_reporting(E_ALL);
                 <strong><p>De ce?</p></strong>
                 <strong><p>Pentru că:</p></strong>
             </div>
+        
             <div class="second-section-group-cards-part">
                 <div class="second-section-card firstCard">
                     <span class="material-symbols-outlined">
